@@ -53,7 +53,6 @@ jobs:
           repository: patrvvk/lab10-config
           token: ${{ secrets.ACTIONS_TOKEN }}
       - run: |
-          rm -rf .git/
           sed -i 's/patrvvk\/lab10-app:.*/patrvvk\/lab10-app:${{ needs.appVersion.outputs.version_number }}/g' lab10-deployment.yaml
           git config user.name github-actions
           git config user.email github-actions@github.com
