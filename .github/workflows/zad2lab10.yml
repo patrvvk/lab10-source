@@ -51,7 +51,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
         with:
-          repository: patrykmazur/lab10_config_repo
+          repository: patrvvk/lab10_config_repo
           token: ${{ secrets.ACTIONS_TOKEN }}
       - run: |
           version_number=${{ needs.appVersion.outputs.version_number }}
